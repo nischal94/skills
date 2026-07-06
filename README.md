@@ -53,8 +53,7 @@ before merging.
 
 ## Credits
 
-- **explain-diff** derives from [Geoffrey Litt's explain-diff skill](https://gist.github.com/geoffreylitt/a29df1b5f9865506e8952488eac3d524) — the background → intuition → literate diff → quiz structure and the quiz-as-speed-regulator idea are his.
-- **blindspot** and **pitch** implement patterns from [Thariq Shihipar's "Finding Your Unknowns"](https://thariqs.github.io/html-effectiveness/unknowns/) framework.
+- **explain-diff**, **blindspot**, and **pitch** implement patterns from [Thariq Shihipar's "Finding Your Unknowns"](https://thariqs.github.io/html-effectiveness/unknowns/) framework — blindspot passes, buy-in docs, and merge-gate quizzes.
 
 ## License
 

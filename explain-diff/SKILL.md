@@ -1,6 +1,6 @@
 ---
 name: explain-diff
-description: Use when the user asks for a rich explanation of a code change, diff, branch, commit, or PR — in any project. Produces a self-contained HTML explainer published as a Claude Code Artifact, ending in a five-question interactive quiz. Derived from Geoffrey Litt's explain-diff skill.
+description: Use when the user asks for a rich explanation of a code change, diff, branch, commit, or PR — in any project. Produces a self-contained HTML explainer published as a Claude Code Artifact, ending in a five-question interactive quiz.
 ---
 
 # Explain Diff
@@ -61,8 +61,6 @@ derive background from the surrounding code and README.
 
 ## Credit
 
-Derived from Geoffrey Litt's `explain-diff` skill
-(gist `a29df1b5f9865506e8952488eac3d524`); the Background → Intuition →
-Literate diff → Quiz structure and the quiz-as-speed-regulator idea are
-his. Adapted: Artifact output instead of local files/Notion, contract-
-document grounding, and the merge-gate framing.
+Implements the explainer + merge-gate quiz pattern from Thariq
+Shihipar's "Finding Your Unknowns" framework, adapted for Artifact
+output and contract-document grounding.
