@@ -2,11 +2,14 @@
   "plugins": [
     {
       "name": "claude-skills",
-      "description": "A collection of Claude Code skills — html-to-image, design-eng, product-explainer, and more.",
+      "description": "A collection of Claude Code skills — code understanding (explain-diff, blindspot, pitch) and creation (html-to-image, design-eng, product-explainer).",
       "skills": [
         "html-to-image",
         "design-eng",
-        "product-explainer"
+        "product-explainer",
+        "explain-diff",
+        "blindspot",
+        "pitch"
       ]
     }
   ]
