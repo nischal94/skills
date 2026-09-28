@@ -3,7 +3,7 @@
 **Production-grade agent skills — map your unknowns before you build, prove you understand what shipped, turn work into artifacts people read, and transcribe any video offline.**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-0e6b5c.svg)](./LICENSE)
-[![Skills](https://img.shields.io/badge/skills-8-1c2b2a.svg)](#the-skills)
+[![Skills](https://img.shields.io/badge/skills-9-1c2b2a.svg)](#the-skills)
 [![CI](https://img.shields.io/badge/CI-validated%20%2B%20pinned-0e6b5c.svg)](./.github/workflows)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-9a6a1e.svg)](./CONTRIBUTING.md)
 
@@ -54,7 +54,7 @@ git clone https://github.com/nischal94/skills.git ~/.claude/skills/skills
 
 ### Understanding & workflow
 
-Three skills that operationalize one discipline: *surface what you don't know before implementing, and prove you understand what shipped before merging.*
+Four skills that operationalize one discipline: *surface what you don't know before implementing, and prove you understand what shipped before merging.*
 
 #### `blindspot` — find your unknown unknowns first
 
@@ -71,6 +71,14 @@ Turns any diff, commit, or PR into a rich HTML explainer: background on the surr
 
 ```
 /explain-diff PR #42 — I need to actually understand the streaming logic before I merge.
+```
+
+#### `teach-me` — explain it back before you move on
+
+Teaches you the work done in the current session — a fix, a change, a decision — until you can explain it yourself. It asks for your own explanation first, answers gaps with hints before explanations, drills the why, and checks each point with a multiple-choice question. A checklist tracks what you have shown you understand; an item is ticked only when you answer its check question correctly, never on the teacher's say-so.
+
+```
+/teach-me the retry logic we just changed
 ```
 
 #### `pitch` — one document that gets the work approved
@@ -119,7 +127,7 @@ Skills load in three tiers, so they cost almost nothing until used:
 2. **Full `SKILL.md`** — loaded only on invocation
 3. **Referenced sub-files** — loaded on demand
 
-The understanding & workflow skills publish their output as self-contained HTML — via the Claude Code Artifact tool when available, or as a local HTML file otherwise. No external dependencies either way.
+`blindspot`, `explain-diff`, and `pitch` publish their output as self-contained HTML — via the Claude Code Artifact tool when available, or as a local HTML file otherwise. No external dependencies either way.
 
 ---
 
@@ -129,6 +137,7 @@ The understanding & workflow skills publish their output as self-contained HTML 
 skills/
 ├── blindspot/            SKILL.md — unknown-unknowns reconnaissance
 ├── explain-diff/         SKILL.md — literate diff explainer + merge-gate quiz
+├── teach-me/             SKILL.md — Socratic teach-back of session work
 ├── pitch/                SKILL.md — demo-led buy-in document
 ├── yt-transcript/        SKILL.md — YouTube captions → clean prose
 ├── media-transcript/     SKILL.md — offline whisper.cpp transcription
@@ -148,7 +157,7 @@ skills/
 
 | Skill | Needs |
 |-------|-------|
-| `blindspot`, `explain-diff`, `pitch` | Nothing — dependency-free |
+| `blindspot`, `explain-diff`, `pitch`, `teach-me` | Nothing — dependency-free |
 | `design-eng`, `product-explainer` | Nothing — dependency-free |
 | `yt-transcript` | `yt-dlp`, `python3` |
 | `media-transcript` | `yt-dlp`, `whisper-cpp`, `ffmpeg`, and a whisper model (~141 MB, SHA-verified on first use; the skill walks you through the download) |
@@ -165,7 +174,7 @@ skills/
 
 ## Credits
 
-The understanding & workflow skills implement patterns from [Thariq Shihipar's *"Finding Your Unknowns"*](https://thariqs.github.io/html-effectiveness/unknowns/) framework — blindspot passes, buy-in docs, and merge-gate quizzes.
+`blindspot`, `explain-diff`, and `pitch` implement patterns from [Thariq Shihipar's *"Finding Your Unknowns"*](https://thariqs.github.io/html-effectiveness/unknowns/) framework — blindspot passes, buy-in docs, and merge-gate quizzes.
 
 ## License
 
